@@ -34,11 +34,13 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between h-18 px-4 py-3">
         <a href="#home" className="flex items-center gap-3 group">
-          <img
-            src={gamLogo}
-            alt="GAM Logo"
-            className="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20 group-hover:ring-primary/50 transition-all"
-          />
+          <div className="w-12 h-12 rounded-full ring-2 ring-primary/20 group-hover:ring-primary/50 transition-all flex items-center justify-center bg-white p-1">
+            <img
+              src={gamLogo}
+              alt="GAM Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
           <div>
             <span className="font-display text-lg font-bold text-primary leading-none block">
               GAM
