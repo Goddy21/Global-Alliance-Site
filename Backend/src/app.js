@@ -20,6 +20,9 @@ app.use("/api/applications", applicationRoutes);
 // ── Health check ─────────────────────────────────────────
 app.get("/api/health", (_, res) => res.json({ status: "ok" }));
 
+// ── Root redirect ──────────────────────────────────────── 
+app.get("/", (req, res) => { res.redirect(process.env.FRONTEND_URL); });
+
 // ── 404 handler ──────────────────────────────────────────
 app.use((_, res) => res.status(404).json({ error: "Route not found." }));
 
