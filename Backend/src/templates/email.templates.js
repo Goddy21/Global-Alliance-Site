@@ -1,3 +1,8 @@
+// Read from .env
+const ORG_EMAIL = process.env.ORG_EMAIL;
+const FRONTEND_URL = process.env.FRONTEND_URL;
+const ORG_NAME = 'Global Alliance for Mission (GAM)';
+
 function orgNotificationTemplate({ id, full_name, email, phone, gender, region, member_type, focus_areas, submitted_at }) {
   const areas = (focus_areas || []).join(", ") || "None selected";
   const date  = new Date(submitted_at).toUTCString();
@@ -29,9 +34,9 @@ function applicantConfirmationTemplate({ full_name }) {
       </div>
       <div style="padding:32px;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 8px 8px;">
         <p>Dear <strong>${full_name}</strong>,</p>
-        <p>Thank you for applying for membership with the <strong>Global Alliance for Mission (GAM)</strong>. We have received your application and our team will review it shortly.</p>
+        <p>Thank you for applying for membership with the <strong>${ORG_NAME}</strong>. We have received your application and our team will review it shortly.</p>
         <p>You can expect to hear back from us within <strong>5–7 business days</strong>.</p>
-        <p style="margin-top:32px;color:#6b7280;font-size:13px;">Global Alliance for Mission · <a href="https://globalallianceorg.netlify.app" style="color:#1a4731;">globalallianceorg.netlify.app</a></p>
+        <p style="margin-top:32px;color:#6b7280;font-size:13px;">${ORG_NAME} · <a href="${FRONTEND_URL}" style="color:#1a4731;">${FRONTEND_URL.replace(/^https?:\/\//, '')}</a></p>
       </div>
     </div>`;
 }

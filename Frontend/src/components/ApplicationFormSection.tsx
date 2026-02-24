@@ -17,8 +17,7 @@ const focusAreas = [
 
 const regions = ["Nairobi", "Kisumu", "Kakamega", "Kericho", "Mombasa"];
 
-// ⬇️  Point this at your deployed backend URL in production
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const ApplicationFormSection = () => {
   const [submitted, setSubmitted] = useState(false);
