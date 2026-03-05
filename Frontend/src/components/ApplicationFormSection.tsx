@@ -143,7 +143,7 @@ const ApplicationFormSection = () => {
                 value={form.fullName}
                 onChange={(e) => set("fullName", e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl bg-background border border-border font-body text-sm text-foreground focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
-                placeholder="Your full name"
+                placeholder="Enter full name"
               />
             </div>
             <div>
@@ -156,7 +156,7 @@ const ApplicationFormSection = () => {
                 value={form.email}
                 onChange={(e) => set("email", e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl bg-background border border-border font-body text-sm text-foreground focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
-                placeholder="Your email"
+                placeholder="Enter email"
               />
             </div>
             <div>
